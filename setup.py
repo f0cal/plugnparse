@@ -10,7 +10,7 @@ with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
 requirements = [
-    # TODO: put package requirements here
+    'venusian'
 ]
 
 test_requirements = [
@@ -20,10 +20,10 @@ test_requirements = [
 setup(
     name='plugnparse',
     version='0.0.1',
-    description="Venusian decorators and argparse support for quickly building command line applications.",
+    description="Venusian decorators and argparse support for quickly building 'plugable' command line applications.",
     long_description=readme + '\n\n' + history,
     author="Brian Rossa",
-    author_email='brian.rossa@gmail.com',
+    author_email='br@f0cal.com',
     url='https://github.com/brianthelion/plugnparse',
     packages=[
         'plugnparse',
