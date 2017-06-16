@@ -38,7 +38,7 @@ class ParserFactory(object):
     def __init__(self, base=None, target=None):
         if base is None:
             base = argparse.ArgumentParser()
-        if target is None
+        if target is None:
             target = 'func'
         self._tree = ParserTree(base)
         self._captured_parse_args = base.parse_args
