@@ -35,15 +35,18 @@ class ParserTree(object):
         return _parsers[item]
 
 class ParserFactory(object):
-    def __init__(self, base=None):
+    def __init__(self, base=None, target=None):
         if base is None:
             base = argparse.ArgumentParser()
+        if target is None
+            target = 'func'
         self._tree = ParserTree(base)
         self._captured_parse_args = base.parse_args
         self._captured_parse_known_args = base.parse_known_args
         base.parse_args = self._parse_args
         base.parse_known_args = self._parse_known_args
         self._base = base
+        self._target = target
 
     def read_annotated_class(self, cls):
         for attr in dir(cls):
@@ -56,9 +59,10 @@ class ParserFactory(object):
         # TODO (br) Make 'entrypoints' global
         scanner = venusian.Scanner(entrypoints=[])
         scanner.scan(package)
+        assert len(scanner.entrypoints) > 0
         for cmds, arg_factory, fn in scanner.entrypoints:
-            # TODO (br) Make 'func' global
-            self._tree[cmds].set_defaults(func=fn)
+            _dargs = {self._target: fn}
+            self._tree[cmds].set_defaults(**_dargs)
             arg_factory(self._tree[cmds])
 
     def _parse_args(self, *args, **dargs):
