@@ -58,7 +58,7 @@ class ParserFactory(object):
     def read_package(self, package, require=None):
         # TODO (br) Make 'entrypoints' global
         scanner = venusian.Scanner(entrypoints=[])
-        scanner.scan(package)
+        scanner.scan(package, categories=['plugnparse'])
         assert len(scanner.entrypoints) > 0
         for cmds, arg_factory, fn in scanner.entrypoints:
             _dargs = {self._target: fn}

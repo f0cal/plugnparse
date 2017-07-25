@@ -6,6 +6,6 @@ def entrypoint(cmds, args=None):
     def _entrypoint(wrapped):
         def callback(scanner, name, ob):
             scanner.entrypoints.append((cmds, args, ob))
-        venusian.attach(wrapped, callback)
+        venusian.attach(wrapped, callback, category='plugnparse')
         return wrapped
     return _entrypoint
