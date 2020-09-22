@@ -1,5 +1,13 @@
-============
-Contributors
-============
+=======
+Credits
+=======
 
-* Brian Rossa <br@f0cal.com>
+Development Lead
+----------------
+
+* Brian Rossa <brian.rossa@gmail.com>
+
+Contributors
+------------
+
+None yet. Why not be the first?
