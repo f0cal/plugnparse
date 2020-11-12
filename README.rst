@@ -1,40 +1,19 @@
-===============================
-Plug-n-Parse
-===============================
+==========
+plugnparse
+==========
 
 
-.. image:: https://img.shields.io/pypi/v/plugnparse.svg
-        :target: https://pypi.python.org/pypi/plugnparse
-
-.. image:: https://img.shields.io/travis/brianthelion/plugnparse.svg
-        :target: https://travis-ci.org/brianthelion/plugnparse
-
-.. image:: https://readthedocs.org/projects/plugnparse/badge/?version=latest
-        :target: https://plugnparse.readthedocs.io/en/latest/?badge=latest
-        :alt: Documentation Status
-
-.. image:: https://pyup.io/repos/github/brianthelion/plugnparse/shield.svg
-     :target: https://pyup.io/repos/github/brianthelion/plugnparse/
-     :alt: Updates
+Add a short description here!
 
 
-Venusian decorators and argparse support for quickly building command line applications.
+Description
+===========
+
+A longer description of your project goes here...
 
 
-* Free software: MIT license
-* Documentation: https://plugnparse.readthedocs.io.
+Note
+====
 
-
-Features
---------
-
-* TODO
-
-Credits
----------
-
-This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
-
-.. _Cookiecutter: https://github.com/audreyr/cookiecutter
-.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
-
+This project has been set up using PyScaffold 3.2.3. For details and usage
+information on PyScaffold see https://pyscaffold.org/.

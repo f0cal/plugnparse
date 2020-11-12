@@ -12,12 +12,10 @@ Tests for `plugnparse` module.
 import sys
 import unittest
 
-from plugnparse import plugnparse
-
+import plugnparse
 
 
 class TestPlugnparse(unittest.TestCase):
-
     def setUp(self):
         pass
 
@@ -28,6 +26,5 @@ class TestPlugnparse(unittest.TestCase):
         pass
 
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     sys.exit(unittest.main())

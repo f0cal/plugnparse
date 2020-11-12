@@ -1,53 +1,23 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+    Setup file for plugnparse.
+    Use setup.cfg to configure your project.
 
+    This file was generated with PyScaffold 3.2.3.
+    PyScaffold helps you to put up the scaffold of your new Python project.
+    Learn more under: https://pyscaffold.org/
+"""
+import sys
+
+from pkg_resources import VersionConflict, require
 from setuptools import setup
 
-with open('README.rst') as readme_file:
-    readme = readme_file.read()
+try:
+    require('setuptools>=38.3')
+except VersionConflict:
+    print("Error: version of setuptools is too old (<38.3)!")
+    sys.exit(1)
 
-with open('HISTORY.rst') as history_file:
-    history = history_file.read()
 
-requirements = [
-    'venusian'
-]
-
-test_requirements = [
-    # TODO: put package test requirements here
-]
-
-setup(
-    name='plugnparse',
-    version='0.0.1',
-    description="Venusian decorators and argparse support for quickly building 'plugable' command line applications.",
-    long_description=readme + '\n\n' + history,
-    author="Brian Rossa",
-    author_email='br@f0cal.com',
-    url='https://github.com/brianthelion/plugnparse',
-    packages=[
-        'plugnparse',
-    ],
-    package_dir={'plugnparse':
-                 'plugnparse'},
-    include_package_data=True,
-    install_requires=requirements,
-    license="MIT license",
-    zip_safe=False,
-    keywords='plugnparse',
-    classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
-        'Intended Audience :: Developers',
-        'License :: OSI Approved :: MIT License',
-        'Natural Language :: English',
-        "Programming Language :: Python :: 2",
-        'Programming Language :: Python :: 2.6',
-        'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.3',
-        'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',
-    ],
-    test_suite='tests',
-    tests_require=test_requirements
-)
+if __name__ == "__main__":
+    setup(use_pyscaffold=True)
